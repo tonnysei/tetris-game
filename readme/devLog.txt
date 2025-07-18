@@ -1,0 +1,98 @@
+DATE: 09/03/2025 7h
+  IMPROVEMENTS: 
+  - successfully implemented the rotation mecanics
+
+  CHANGES: 
+  - made the movements controlled by player and the rotation run by the same delay might change it later
+
+  TO.DO: 
+  - need to work on the collisions on the X axis
+  - need to implement the score mecanics 
+
+DATE: 21/03/2025 20h
+  IMPROVEMENTS:
+  - successfully implemented the score mecanics
+  - fixed the delay problem between moves by ensuring that events are triggered only once per click
+
+  TO.DO:
+  - clean up code 
+  - add collisions on x axis
+  - add graphics and soundtracks
+
+DATE: 26/03/2025 11h
+  IMPROVEMENTS:
+  - added collisions on x axis
+
+  TO.DO:
+  - blocks keep repeating. math.random() should be replaced with a better alternative
+  - some blocks like "I" have bugs
+  - add soundtracks and graphics
+
+DATE: 27/03/2025 15h
+  IMPROVEMENTS:
+  - added a lock timer 
+  - added colors to blocks
+  - added random seed to randomize tetreminoes every game
+  - improved the rotate function so tetreminoes rotate only if possible
+
+  CHANGES:
+  - currently reworking the collision system as i had many bugs
+  - created a check collision funtion 
+
+  TO.DO:
+  - add score 
+  - add soundtracks
+  - finish reworking the collision system
+  - add a main menu
+
+DATE: 05/04/2025 19h
+  IMPROVEMENTS:
+  - reworked collision system
+  - fixed many bugs related to hitboxes
+  - improved graphics
+
+  CHANGES:
+  - removed the check collision function
+  - added a numbered grid to help with debugging
+
+  TO.DO:
+  - add a score system with levels
+  - add soundtracks
+  - add a main menu
+  - fix collisions on the left
+
+DATE: 09/04/2025 13h
+  IMPROVEMENTS:
+  - fixed horizontal collisions
+  - added gameover mecanics
+  - fixed lock timer
+  TO.DO:
+  - add a score system with levels
+  - add soundtracks
+  - add a main menu
+
+DATE: 10/06/2025 18h
+  IMPROVEMENTS:
+  - created a main menu
+  - improved player experience
+  TO.DO:
+  - add score system with levels
+  - add soundtracks
+  - add settings options
+
+DATE: 06/07/2025 13h
+  IMPROVEMENTS:
+  - added settings options
+  - implemented music effects and soundtracks
+  TO.DO:
+  - add option to control volume
+  - add score system with levels
+
+DATE: 18/07/2025 13h
+  IMPROVEMENTS:
+  - added a volume slider
+  - added pause and escape mecanics
+  - implemented level selection
+  - implemented a basic score system
+  - added a highscore
+  - uploaded V1.0 to github
