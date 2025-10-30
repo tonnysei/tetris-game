@@ -50,5 +50,3 @@ function love.draw()
     love.graphics.print("GAME PAUSED", WIDTH / 2 - 170, 100)
   end
 end
-
-
