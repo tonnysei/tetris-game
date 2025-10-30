@@ -27,13 +27,15 @@
     | ---------- | ------- | ------------------------------------------------------ |
 
   ### ⚙️ Key Functions
-    | ----------------- | ------------------------------------- |
-    | Function          | Description                           |
-    | ----------------- | ------------------------------------- |
-    | `love.load()`     | Initializes game variables and assets |
-    | `love.update(dt)` | Updates game state and handles logic  |
-    | `love.draw()`     | Renders game elements to the screen   |
-    | ----------------- | ------------------------------------- |
+    | ---------------------------| -------------------------------------------------------|
+    | Function                   | Description                                            |
+    | ---------------------------| -------------------------------------------------------|
+    | `love.load()`              | Initializes game variables and assets                  |
+    | `love.update(dt)`          | Updates game state and handles logic                   |
+    | `love.draw()`              | Renders game elements to the screen                    |
+    | `love.keypressed(key)`     | Handles input: movement, rotation, pause, and ending   |
+    |                            | the game                                               |    
+    | ---------------------------| ------------------------------------------------------ |
 
  ## 📄 File: conf.lua 
 
@@ -101,9 +103,6 @@
     |                            |                                                        |
     | `Blocks:draw(x, y)`        | Draws the current Tetromino on the screen at given     |
     |                            | offsets                                                |
-    |                            |                                                        |
-    | `love.keypressed(key)`     | Handles input: movement, rotation, pause, and ending   |
-    |                            | the game                                               |
     | -------------------------- | ------------------------------------------------------ |
 
  ## 📄 File: grid.lua

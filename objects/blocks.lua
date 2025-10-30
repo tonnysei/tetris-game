@@ -151,38 +151,6 @@ function Blocks:fall(dt)
   end
 end
 
-function love.keypressed(key)
-  -- check for right movement
-  if key == "right" and not Blocks.right and PAUSE == false then
-    Blocks.current.x = Blocks.current.x + 1
-  end
-  -- check for left movement
-  if key == "left" and not Blocks.left and PAUSE == false then
-    Blocks.current.x = Blocks.current.x - 1
-  end
-  -- -- check for downward movement
-  if key == "down" and not Blocks.down and PAUSE == false then
-    Blocks.current.y = Blocks.current.y + 1
-  end
-
-  if key == "r" and PAUSE == false then
-    Blocks:rotate()
-  end
-
-  if key == "space" and START == true then
-    PAUSE = not PAUSE
-  end
-
-  if key == "escape" and START == true then
-    START = false
-    GameOver = true
-    if Grid.currentScore > Grid.highScore then
-      Grid.highScore = Grid.currentScore
-      love.filesystem.write("highscore.txt", tostring(Grid.highScore))
-    end
-  end
-end
-
 function Blocks:checkBoundaries()
   local w = #self.current.shape[1] -- get width of the block
   local h = #self.current.shape -- get height of the block

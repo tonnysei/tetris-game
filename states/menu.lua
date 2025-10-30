@@ -37,6 +37,10 @@ function Menu:load()
     PARAM = true
   end))
 
+  table.insert(self.buttons, self:newButton("About me", function()
+    love.system.openURL("file://" .. love.filesystem.getSourceBaseDirectory() .. "/TETRIS GAME/assets/cs50x-final-project.png")
+  end))
+
   table.insert(self.buttons, self:newButton("Exit", function ()
     love.event.quit()
   end))
@@ -83,7 +87,7 @@ function Menu:draw()
 
     for i, param in ipairs(self.params) do
       local bx = ww/2 - button_width/2
-      local by = wh/2 - total_height/2 + y_offset + 40
+      local by = wh/2 - total_height/2 + y_offset + 80
 
 
       local mx, my = love.mouse.getPosition()

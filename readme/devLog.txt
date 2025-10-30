@@ -96,3 +96,8 @@ DATE: 18/07/2025 13h
   - implemented a basic score system
   - added a highscore
   - uploaded V1.0 to github
+
+DATE: 30/10/2025 12h
+  IMPROVEMENTS:
+  - submitted the documentation
+  - created a readme for cs50x final project submission

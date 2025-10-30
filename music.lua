@@ -24,7 +24,7 @@ function Music:load()
     Music.loop:setLooping(true)
 
     -- Set music volume
-    Music.loop:setVolume(volume)
+    Music.loop:setVolume(volume/2)
 
     -- Start playing the music
     love.audio.play(Music.loop)
@@ -41,7 +41,7 @@ function Music:update(dt)
       local mouseX = love.mouse.getX()
       local knobX = math.max(slider.x, math.min(mouseX, slider.x + slider.width))
       volume = (knobX - slider.x) / slider.width
-      Music.loop:setVolume(volume)
+      Music.loop:setVolume(volume/2)
   end
 end
 
