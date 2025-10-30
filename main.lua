@@ -1,7 +1,7 @@
 require("states/grid")
 require("objects/blocks")
 require("states/menu")
-require("music")
+require("sound/music")
 
 START = false
 GameOver = false

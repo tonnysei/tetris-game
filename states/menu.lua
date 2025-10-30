@@ -21,9 +21,9 @@ end
 
 function Menu:load()
   self.font = love.graphics.newFont(32)
-  self.font_gameover = love.graphics.newFont(48)
+  self.font_title = love.graphics.newFont(48)
 
-  table.insert(self.buttons, self:newButton("Start Game", function ()
+  table.insert(self.buttons, self:newButton("Start New Game", function ()
     START = true
     Grid.currentScore = 0
   end))
@@ -192,7 +192,7 @@ function Menu:draw()
 
     for i, button in ipairs(self.buttons) do
       local bx = ww/2 - button_width/2
-      local by = wh/2 - total_height/2 + y_offset
+      local by = wh/2 - total_height/2 + y_offset + 40
 
 
       local mx, my = love.mouse.getPosition()
@@ -228,12 +228,19 @@ function Menu:draw()
   end
 
   local text = "GAME OVER !!"
+  local title = "TETRIS"
 
-  love.graphics.setColor(1, 0, 0)
-  love.graphics.setFont(self.font_gameover)
-  local tw = self.font_gameover:getWidth(text)
+  love.graphics.setFont(self.font_title)
 
   if GameOver == true and PARAM == false and LEVELS == false then
-    love.graphics.print(text, ww / 2  - tw/2, wh / 8)
+    local tw = self.font_title:getWidth(text)
+    love.graphics.setColor(1, 0, 0)
+    love.graphics.print(text, ww / 2  - tw/2, wh / 6)
+  end
+
+  if START == false and PARAM == false and LEVELS == false then
+    local tw = self.font_title:getWidth(title)
+    love.graphics.setColor(1, 1, 1)
+    love.graphics.print(title, ww / 2  - tw/2, wh / 12)
   end
 end
